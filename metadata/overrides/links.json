@@ -1,0 +1,11 @@
+{
+  "dishes/meat_dish/卤菜/卤菜.md": {
+    "./../../condiment/糖色.md": "tips/advanced/糖色的炒制.md"
+  },
+  "dishes/meat_dish/虎皮肘子.md": {
+    "tips/advanced/油温判断技巧.md": "tips/advanced/油温判断技巧.md"
+  },
+  "dishes/vegetable_dish/炸洋葱花/炸洋葱花.md": {
+    "../condiment/蒜香酱油.md": "dishes/condiment/蒜香酱油.md"
+  }
+}

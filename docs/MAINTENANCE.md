@@ -14,6 +14,4 @@ git commit -m "chore: sync HowToCook content"
 git push origin main
 ```
 
-如需回滚，可在主站发布工作流选择此前菜谱仓库的完整提交 SHA，或者在菜谱仓库回退目标内容提交后推送。验证记录和锁定文件必须和内容一起回滚。
-
-推送到 `main` 后先核对内容和路径。自动通知主站需在本仓库 **Settings → Secrets and variables → Actions → Repository secrets** 配置 `SITE_RELEASE_DISPATCH_TOKEN`。该细粒度令牌仅授权 `urixie/urixie.github.io` 的 **Actions: Read and write** 与 **Metadata: Read**。未配置时工作流只执行内容校验。首次导入由专门工作流执行，后续同步用上述本地命令。
+推送到 `main` 后，在主站仓库运行 `python scripts/release_local.py --webkit --publish`，验证并上线。回滚菜谱内容时将目标内容和对应的锁定文件一并还原、验证和提交，再重新发布主站。完整步骤见 [主站维护说明](https://github.com/urixie/urixie.github.io/blob/main/docs/repository-split.md)。
